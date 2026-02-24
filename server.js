@@ -199,7 +199,7 @@ app.post("/gesprov/faturas", async (req, res) => {
     if (!auth.ok) return res.status(auth.status || 500).json(auth);
 
     // 🔧 AJUSTE AQUI: endpoint real do Gesprov que retorna faturas/títulos
-    const ENDPOINT_FATURAS = "/ges-api/v1/titulos"; // Com base na sua documentação, 'consultarTitulosPorCliente' sugere 'titulos'
+    const ENDPOINT_FATURAS = "/ges-api/v1/consultar-titulos"; // Com base na sua documentação, 'consultarTitulosPorCliente' sugere 'titulos'
 
     const bodyObj = {
       cpf_cnpj: String(cpf_cnpj).replace(/\D/g, ""),
